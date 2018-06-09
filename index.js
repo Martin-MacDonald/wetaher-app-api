@@ -8,7 +8,22 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 3000;
 
 app.get('/shopping', (req, res) => {
-  res.send('Hello World');
+  res.json([{
+    item: 'Soya Milk',
+    for: 'Martin'
+  },
+  {
+    item: 'Tofu',
+    for: 'Martin',
+  },
+  {
+    item: 'Noodles',
+    for: 'Susan'
+  },
+  {
+    item: 'Houmus',
+    for: 'Susan'
+  }]);
 });
 
 app.post('/shopping', (req, res) => {
